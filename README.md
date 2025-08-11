@@ -58,6 +58,9 @@ Habilita el sitio y recarga Nginx:
 3.  Eventos: selecciona **Just the push event**.
     
 4.  Guarda y prueba.
+
+<img width="1079" height="740" alt="image" src="https://github.com/user-attachments/assets/43df73bc-1376-4e4d-b5a5-0b63b7cb154a" />
+
     
 
 * * *
@@ -87,3 +90,4 @@ Cuando hagas un `git push`:
     -   Aporta integración con marketplace y miles de acciones prehechas.
         
     -   Pero… **requiere más configuración** y depende de un servicio externo.
+
