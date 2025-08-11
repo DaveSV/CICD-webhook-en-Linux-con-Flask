@@ -91,3 +91,4 @@ Cuando hagas un `git push`:
         
     -   Pero… **requiere más configuración** y depende de un servicio externo.
 
+Una vez que tienes tu aplicación Flask corriendo detrás de Nginx y ya le has asignado un dominio, puedes generar e instalar un certificado SSL/TLS automático en el servidor usando Let’s Encrypt con Certbot.
