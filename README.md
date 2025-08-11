@@ -2,7 +2,7 @@
 
 **Proyecto listo para producción** de un webhook Flask que se ejecuta detrás de **Nginx** usando **Gunicorn**, con validación de firma de GitHub, ejecución de `git fetch` + `git reset` y reinicio del servicio web.
 
-  
+  * * *
 
 ## **1️⃣ Código Python del webhook**
 
@@ -23,6 +23,8 @@ Luego habilita y arranca:
 
 `sudo systemctl daemon-reload sudo systemctl enable webhook sudo systemctl start webhook`
 
+* * *
+
 ## **3️⃣ Configuración Nginx**
 
 Archivo `/etc/nginx/sites-available/webhook.conf`: (archivo: webhook.conf)
@@ -36,7 +38,7 @@ Habilita el sitio y recarga Nginx:
 
 `sudo ln -s /etc/nginx/sites-available/webhook.conf /etc/nginx/sites-enabled/ sudo nginx -t sudo systemctl reload nginx`
 
-  
+  * * *
 
 ## **4️⃣ Configuración en GitHub**
 
@@ -71,3 +73,17 @@ Cuando hagas un `git push`:
 3.  Se hace `git fetch` + `git reset --hard`.
     
 4.  Se reinicia el servicio del sitio (`mi-sitio.service`).
+
+* * *
+
+1.  ### 🔹 ... y GitHub Actions? Lo que hace
+    
+    -   Permite flujos mucho más complejos (tests, builds, lint, despliegues múltiples).
+        
+    -   Ejecuta pasos en runners de GitHub o propios (self-hosted runners).
+        
+    -   Puede desplegar a múltiples entornos o nubes (AWS, Azure, GCP, etc.).
+        
+    -   Aporta integración con marketplace y miles de acciones prehechas.
+        
+    -   Pero… **requiere más configuración** y depende de un servicio externo.
