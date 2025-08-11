@@ -1,0 +1,13 @@
+[Unit]
+Description=Webhook GitHub para actualizar el sitio
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/ruta/a/tu/app
+Environment="WEBHOOK_SECRET=tu_clave_secreta"
+ExecStart=/usr/bin/gunicorn --workers 2 --bind unix:/tmp/webhook.sock webhook:app
+
+[Install]
+WantedBy=multi-user.target
